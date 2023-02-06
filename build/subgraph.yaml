@@ -1,6 +1,6 @@
 specVersion: 0.0.4
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: LegionStake
@@ -22,7 +22,7 @@ dataSources:
         - WithdrawToken
       abis:
         - name: LegionStake
-          file: ./abis/LegionStake.json
+          file: LegionStake\abis\LegionStake.json
       eventHandlers:
         - event: Claim(address,uint256)
           handler: handleClaim
@@ -36,4 +36,4 @@ dataSources:
           handler: handleWithdraw
         - event: WithdrawToken(indexed address,uint256)
           handler: handleWithdrawToken
-      file: ./src/legion-stake.ts
+      file: LegionStake\LegionStake.wasm

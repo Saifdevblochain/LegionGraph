@@ -8,7 +8,8 @@
     "create-local": "graph create --node http://localhost:8020/ saifdevblochain/legion1",
     "remove-local": "graph remove --node http://localhost:8020/ saifdevblochain/legion1",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 saifdevblochain/legion1",
-    "test": "graph test"
+    "test": "graph test",
+    "deploy-hosted": "graph deploy --product hosted-service saifdevblochain/legion1"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.35.0",
