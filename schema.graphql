@@ -1,0 +1,36 @@
+type Claim @entity {
+  id: ID!
+  staker: Bytes! # address
+  reward: BigInt! # uint256
+}
+
+type OwnershipTransferred @entity {
+  id: ID!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Stake @entity {
+  id: ID!
+  staker: Bytes! # address
+  _amount: BigInt! # uint256
+  _lockPeriod: BigInt! # uint256
+  _tier: BigInt! # uint256
+}
+
+type Unstake @entity {
+  id: ID!
+  unstaker: Bytes! # address
+  unstakeTime: BigInt! # uint256
+}
+
+type Withdraw @entity {
+  id: ID!
+  withdrawer: Bytes! # address
+}
+
+type WithdrawToken @entity {
+  id: ID!
+  withdrawer: Bytes! # address
+  amount: BigInt! # uint256
+}
